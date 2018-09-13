@@ -9,7 +9,7 @@ export default props =>(
 
 const styles = StyleSheet.create({
     topo:{
-        backgrpundColor: '#2196F3',
+        backgroundColor: '#2196F3',
         padding: 10,
         alignItems: 'center'
     },
