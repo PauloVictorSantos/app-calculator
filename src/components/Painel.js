@@ -5,33 +5,38 @@ import Operacao from './Operacao';
 import Comando from './Comando';
 
 class Painel extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state ={num1:'', num2: '', operacao: 'soma'};
+        this.state = { num1: '', num2: '', operacao: '' };
         this.calcular = this.calcular.bind(this);
         this.atualizaValor = this.atualizaValor.bind(this);
+        this.atualizaOperacao = this.atualizaOperacao.bind(this);
     }
 
-    calcular(){
-        const resultado = parseFloat(this.state.num1)+ parseFloat(this.state.num2);
+    calcular() {
+        const resultado = parseFloat(this.state.num1) + parseFloat(this.state.num2);
     }
-    
-    atualizaValor(nomeCampo, numero){
+
+    atualizaValor(nomeCampo, numero) {
         const obj = {};
         obj[nomeCampo] = numero;
         this.setState(obj);
+    }
+    atualizaOperacao(operacao) {
+        this.setState({ operacao });
     }
 
     render() {
         return (
             <View>
-                <Entrada 
-                num1={this.state.num1} 
-                num2={this.state.num2}
-                atualizaValor={this.atualizaValor}
+                <Entrada
+                    num1={this.state.num1}
+                    num2={this.state.num2}
+                    atualizaValor={this.atualizaValor}
                 />
-                <Operacao operacao={this.state.operacao} />
-                <Comando  acao={this.calcular}/>
+                <Operacao atualizaOperacao={this.atualizaOperacao}
+                    operacao={this.state.operacao} />
+                <Comando acao={this.calcular} />
             </View>
         );
     }
