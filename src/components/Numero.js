@@ -1,15 +1,14 @@
 import React from 'react';
-import {TextInput, StyleSheet}  from 'react-native';
+import { TextInput, StyleSheet } from 'react-native';
 
-export default props =(
-    <TextInput style={styles.numero}/>
+export default props => (
+    <TextInput style={styles.num} />
 );
 
 const styles = StyleSheet.create({
-    numero:{
-        widht: 140,
+    num: {
+        width: 140,
         height: 80,
-        fontSize: 20,
-        
+        fontSize: 20
     }
 });
