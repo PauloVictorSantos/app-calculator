@@ -11,7 +11,7 @@ export default class Operacao extends Component {
             }}
             >
                 <Picker.Item label='Soma' value='soma' />
-                <Picker.Item label='Subtração' value='Subtracao' />
+                <Picker.Item label='Subtração' value='subtracao' />
             </Picker>
         );
     }
