@@ -6,7 +6,6 @@ export default class Operacao extends Component {
         super(props);
         this.state = { operacao: '' }
     }
-
   
     render() {
         return (
